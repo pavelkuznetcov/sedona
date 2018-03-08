@@ -1,0 +1,29 @@
+.clearfix() {
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.container() {
+	width: 320px;
+	margin: 0 auto;
+
+	@media @tablet-widths {
+		width: 640px;
+	}
+
+	@media @desktop-widths {
+		width: 960px;
+	}
+}
+
+.container-fluid(){
+	width: auto;
+	@media @tablet-widths {
+		width: 100%; /* 700px/768px ~=91% */
+		max-width: 1200px; /* 960px/.91 ~= 1054px */
+		margin: 0 auto;
+	}
+}
