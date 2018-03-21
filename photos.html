@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<title>Седона</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div class="wrap">
+		<header class="page-header">
+			<nav class="main-nav main-nav--closed main-nav--nojs">
+				<button class="main-nav__toggle" type="button">Открыть меню</button>
+				<div class="main-nav__wrapper">
+					<ul class="main-nav__items">
+						<li class="main-nav__item">
+							<a class="main-nav__link  main-nav__link--active">Главная</a>
+						</li>
+						<li class="main-nav__item">
+							<a class="main-nav__link">Фото и видео</a>
+						</li>
+						<li class="main-nav__item">
+							<a class="main-nav__link">Форма отзыва</a>
+						</li>
+						<li class="main-nav__item">
+							<a class="main-nav__link">HTML Academy</a>
+						</li>
+						<li class="main-nav__item main-nav__item--logo">
+							<a class="main-nav__logo">
+								<picture>
+									<source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+					        <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+									<img src="img/mobile-logo.svg" width="280" height="214" alt='Седона'>
+								</picture>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="page-header__intro  page-header__intro--photos">
+				<img src="img/Sedona-logo-page_photo.svg" width="229" height="39">
+			</div>
+	 	</header>
+
+		<main class="page-main">
+
+		</main>
+
+		<footer class="footer">
+			<div class="footer__inner">
+				<h2 class="footer__hashtag">#VISITSEDONA</h2>
+				<ul class="footer__socials">
+					<li class="footer__social footer__social--tw"></li>
+					<li class="footer__social footer__social--fb"></li>
+					<li class="footer__social footer__social--yt"></li>
+				</ul>
+				<div class="footer__copyright">
+					<span class="footer__copyright-text">Разработано</span>
+					<a class="footer__copyright-logo" href="#"></a>
+				</div>
+			</div>
+		</footer>
+  </div>
+	<script>
+		var navMain = document.querySelector('.main-nav');
+		var navToggle = document.querySelector('.main-nav__toggle');
+
+		navMain.classList.remove('main-nav--nojs');
+		navToggle.addEventListener('click', function(){
+			if (navMain.classList.contains('main-nav--closed')) {
+				navMain.classList.remove('main-nav--closed');
+				navMain.classList.add('main-nav--opened');
+			} else {
+				navMain.classList.add('main-nav--closed');
+				navMain.classList.remove('main-nav--opened');
+			}
+		});
+
+	</script>
+
+</body>
+</html>

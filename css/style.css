@@ -30,6 +30,11 @@ img {
   max-width: 100%;
   height: auto;
 }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 .page-header__intro {
   min-height: 389px;
   margin: 0;
@@ -38,16 +43,33 @@ img {
   padding-left: 0;
   padding-top: 90px;
   background-color: #e4f1f9;
-  background-image: url("../img/background-triangle.svg"), url("../img/back-mobile.png");
-  background-size: auto, auto 389px;
+  background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/back-mobile.png");
+  background-size: auto 389px, 768px 389px;
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-position: 50% bottom;
 }
-@media (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
   .page-header__intro {
-    background-image: url("../img/background-triangle.svg"), url("../img/bg-back-mobile@2x.jpg");
-    background-size: auto, auto 389px;
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-mobile@2x.jpg");
+    background-size: auto 389px, 768px 389px;
+    -webkit-background-size: auto 389px, 768px 389px;
+    /* Safari 3.0 */
+    -moz-background-size: auto 389px, 768px 389px;
+    /* Gecko 1.9.2 (Firefox 3.6) */
+    -o-background-size: auto 389px, 768px 389px;
+    /* Opera 9.5 */
+  }
+}
+.page-header__intro--photos {
+  min-height: 158px;
+  padding-top: 52px;
+  background-size: auto 389px, auto 389px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .page-header__intro--photos {
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-mobile@2x.jpg");
+    background-size: auto 389px, auto 389px;
   }
 }
 @media (min-width: 768px) {
@@ -58,17 +80,29 @@ img {
   .page-header__intro {
     min-height: 518px;
     padding-top: 78px;
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/photo-background@1x.jpg");
+    background-size: auto, 1200px 518px;
+  }
+  .page-header__intro--photos img {
+    height: 78px;
+  }
+  .page-header__intro--photos {
+    min-height: 290px;
+    padding-top: 95px;
   }
 }
-@media (min-width: 768px) and (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-width: 768px) and (min-resolution: 1.5dppx) {
+@media (min-width: 768px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and only screen and (min-resolution: 144dpi) {
   .page-header__intro {
-    background-image: url("../img/background-triangle.svg"), url("../img/bg-back-desktop@2x.jpg");
-    background-size: 100%, auto 596px;
+    box-sizing: border-box;
+    background-color: #000;
+    background-image: url("../img/bg-intro-triangle-desktop.svg"), url("../img/bg-back-desktop@2x.jpg");
+    background-size: auto, 1200px 518px;
   }
 }
 @media (min-width: 1200px) {
-  .page-header__logo {
-    height: 96px;
+  .page-header__intro--photos {
+    min-height: 300px;
+    padding-top: 200px;
   }
 }
 .main-nav {

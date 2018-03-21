@@ -11,24 +11,67 @@
 	padding-left: 0;
 	padding-top: 90px;
 	background-color: #e4f1f9;
-	background-image: url("../img/background-triangle.svg"),
+	background-image: url("../img/bg-intro-triangle-desktop.svg"),
 										url("../img/back-mobile.png");
-	background-size: auto, auto 389px;
+	// background-size: auto, auto 389px;
+	background-size: auto 389px, 768px 389px;
+
 	box-sizing: border-box;
 
 	background-repeat: no-repeat;
 	background-position: 50% bottom;
+
 	// background-size: 768px 389px, auto;
 	// background-size: auto 320px;
 
-	@media (max-width: 767px) and (min-resolution: 144dpi),
-			(max-width: 767px) and (min-resolution: 1.5dppx) {
-			background-image: url("../img/background-triangle.svg"),
+	// @media (max-width: 767px) and (min-resolution: 144dpi),
+	// 		(max-width: 767px) and (min-resolution: 1.5dppx) {
+	// 		background-image: url("../img/background-triangle.svg"),
+	// 											url("../img/bg-back-mobile@2x.jpg");
+	// 		// background-size: 100%, auto 479px;
+	// 		background-color: purple;
+	// 		background-size: auto, auto 389px;
+	// 		-webkit-background-size: auto, auto 389px;           /* Safari 3.0 */
+  //    	-moz-background-size: auto, auto 389px;           /* Gecko 1.9.2 (Firefox 3.6) */
+  //      -o-background-size: auto, auto 389px;           /* Opera 9.5 */
+  //         background-size: auto, auto 389px;
+	// 	}
+
+
+
+	 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min-resolution: 144dpi) {
+
+			background-image: url("../img/bg-intro-triangle-desktop.svg"),
 												url("../img/bg-back-mobile@2x.jpg");
-			// background-size: 100%, auto 479px;
-			background-size: auto, auto 389px;
+			background-size: auto 389px, 768px 389px;
+
+			-webkit-background-size: auto 389px, 768px 389px;           /* Safari 3.0 */
+     	-moz-background-size: auto 389px, 768px 389px;           /* Gecko 1.9.2 (Firefox 3.6) */
+       -o-background-size: auto 389px, 768px 389px;           /* Opera 9.5 */
 		}
 }
+
+// !!!!!!!!!!!!!!!!!!!photo.html!!!!!!!!!!!!!!!!!!!!!!!
+.page-header__intro--photos {
+	min-height: 158px;
+	padding-top: 52px;
+	background-size: auto 389px, auto 389px;
+
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+		 only screen and (min-resolution: 144dpi) {
+
+		 background-image: url("../img/bg-intro-triangle-desktop.svg"),
+											 url("../img/bg-back-mobile@2x.jpg");
+		 background-size: auto 389px, auto 389px;
+
+		 // -webkit-background-size: auto, auto 389px;           /* Safari 3.0 */
+		 // -moz-background-size: auto, auto 389px;           /* Gecko 1.9.2 (Firefox 3.6) */
+			// -o-background-size: auto, auto 389px;           /* Opera 9.5 */
+	 }
+}
+
+
 
 
 
@@ -38,33 +81,56 @@
 		height: 350px;
 		width: 460px;
 	}
-	// .page-header__logo {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	margin-left: auto;
-	// 	margin-right: auto;
-  //   left: 0;
-	// 	right: 0;
-	// }
+
 	.page-header__intro {
 		min-height: 518px;
 		padding-top: 78px;
-		@media (min-width: 768px) and (min-resolution: 144dpi),
-				(min-width: 768px) and (min-resolution: 1.5dppx) {
-				background-image: url("../img/background-triangle.svg"),
+
+		background-image: url("../img/bg-intro-triangle-desktop.svg"),
+											url("../img/photo-background@1x.jpg");
+		background-size: auto, 1200px 518px;
+
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+				box-sizing: border-box;
+				background-color: #000;
+				background-image: url("../img/bg-intro-triangle-desktop.svg"),
 													url("../img/bg-back-desktop@2x.jpg");
-				background-size: 100%, auto 596px;
+				background-size: auto, 1200px 518px;
+
 				// background-size: auto, 2400px auto;
 				// background-size: auto, 1036px 518px;
 				// background-size: auto, 518px;
-			}
+		}
+			// @media (min-width: 768px) and (min-resolution: 144dpi),
+			// 		(min-width: 768px) and (min-resolution: 1.5dppx) {
+			// 		background-color: #000;
+			// 		background-image: url("../img/background-triangle.svg"),
+			// 											url("../img/bg-back-desktop@2x.jpg");
+			// 		background-size: auto, auto 518px;
+			// 		// background-size: auto, 2400px auto;
+			// 		// background-size: auto, 1036px 518px;
+			// 		// background-size: auto, 518px;
+			// 	}
+	}
+
+	// !!!!!!!!!!!!!!!!!!!photo.html!!!!!!!!!!!!!!!!!!!!!!!
+	.page-header__intro--photos img {
+		height: 78px;
+	}
+	.page-header__intro--photos {
+		min-height: 290px;
+		padding-top: 95px;
 	}
 
 }
 
 
 @media @desktop-widths {
-	.page-header__logo {
-		height: 96px;
+
+	// !!!!!!!!!!!!!!!!!!!photo.html!!!!!!!!!!!!!!!!!!!!!!!
+	.page-header__intro--photos {
+		min-height: 300px;
+		padding-top: 200px;
 	}
 }
