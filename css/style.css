@@ -102,7 +102,6 @@ img {
 @media (min-width: 1200px) {
   .page-header__intro--photos {
     min-height: 300px;
-    padding-top: 200px;
   }
 }
 .main-nav {
@@ -775,4 +774,105 @@ p {
   }
 }
 @media (min-width: 1200px) {
+}
+.photo-video__posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.photo-video__header {
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+}
+.photo-video__header::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.photo-video__header--video-pres::after {
+  display: none;
+}
+.photo-video__header-header {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+.photo-video__header-text {
+  font-size: 14px;
+  line-height: 24px;
+}
+.photo-video__item {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: relative;
+  text-align: left;
+}
+.photo-video__item::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #e5e5e5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.photo-video__item-content {
+  margin: 0;
+  padding: 0;
+}
+.photo-video__descr {
+  font-size: 14px;
+  line-height: 24px;
+}
+.photo-video__item-header {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.photo-video__item-author {
+  margin-bottom: 10px;
+  text-transform: none;
+}
+.photo-video__likes-icon-wrapper {
+  margin-right: 10px;
+}
+.photo-video__likes-count {
+  font-weight: bold;
+}
+#icon-like {
+  fill: #b2b2b2;
+}
+@media (min-width: 768px) {
+  .photo-video__header {
+    padding-top: 76px;
+    padding-bottom: 73px;
+    padding-left: 169px;
+    padding-right: 169px;
+  }
+  .photo-video__header::after {
+    display: none;
+  }
+  .photo-video__header-header {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+  .photo-video__item::after {
+    display: none;
+  }
 }
