@@ -161,6 +161,23 @@
     fill: #fff;;
   }
 
+}
 
+@media @desktop-widths {
+  .player-screen {
+    min-height: 500px;
+    width: 800px;
+    background-image: url("../img/video-desktop.jpg");
+    background-size: 800px 500px;
 
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+
+       background-image: url("../img/video-desktop@2x.jpg");
+     }
+  }
+
+  .player-controls {
+    width: 800px;
+  }
 }

@@ -1059,3 +1059,19 @@ p {
     background-image: url("../img/video-tablet@2x.jpg");
   }
 }
+@media (min-width: 1200px) {
+  .player-screen {
+    min-height: 500px;
+    width: 800px;
+    background-image: url("../img/video-desktop.jpg");
+    background-size: 800px 500px;
+  }
+  .player-controls {
+    width: 800px;
+  }
+}
+@media (min-width: 1200px) and only screen and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1200px) and only screen and (min-resolution: 144dpi) {
+  .player-screen {
+    background-image: url("../img/video-desktop@2x.jpg");
+  }
+}
