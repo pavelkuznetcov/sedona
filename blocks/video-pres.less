@@ -46,20 +46,23 @@
     content: "";
     position: absolute;
     left: 22px;
-    top: 22px;
-    width: 235px;
+    right: 22px;
+    top: 50%;
+    // width: 235px;
     height: 3px;
     background-color: rgba(255,255,255,0.3);
+    transform: translate(0,-50%);
   }
   &::after {
     content: "";
     position: absolute;
-    top: 19px;
+    top: 50%;
     left: 60px;
     width: 9px;
     height: 9px;
-    border-radius: 5px;
+    border-radius: 50%;
     background-color: #fff;
+    transform: translate(0,-50%);
   }
 }
 
@@ -70,6 +73,7 @@
   outline: none;
   background-color: transparent;
   cursor: pointer;
+
 }
 
 .player-controls__btn--subs {
@@ -77,14 +81,86 @@
   margin-left: auto;
 }
 
-#icon-video-replay {
+.player-icon {
   fill: #5c6870;
+  &:hover {
+    fill: #333333;
+  }
 }
 
-#icon-video-subtitles {
-  fill: #5c6870;
-}
+// #icon-video-replay {
+//   fill: #5c6870;
+// }
+//
+// #icon-video-subtitles {
+//   fill: #5c6870;
+// }
+//
+// #icon-video-fullscreen {
+//   fill: #5c6870;
+//
+// }
 
-#icon-video-fullscreen {
-  fill: #5c6870;
+// .player-controls__btn:hover{
+//
+//     fill: #333333;
+//
+// }
+
+
+
+@media @tablet-widths {
+  .video-presentation__video-player {
+    position: relative;
+  }
+
+  .player-screen {
+    min-height: 499px;
+    width: 648px;
+    background-image: url("../img/video-tablet.jpg");
+    background-size: 648px 499px;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min-resolution: 144dpi) {
+
+       background-image: url("../img/video-tablet@2x.jpg");
+     }
+  }
+
+  .player-controls {
+    position: absolute;
+    bottom: 0;
+    width: 648px;
+    height: 92px;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .player-controls__btn--replay,
+  .player-controls__btn--wide {
+    width: 90px;
+  }
+
+  .progress-bar {
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-grow: 1;
+    width: auto;
+    height: 92px;
+    background-color: transparent;
+
+    &::before {
+      // width: 389px;
+      left: 6px;
+      right: 35px;
+      height: 4px;
+    }
+  }
+
+  .player-icon {
+    fill: #fff;;
+  }
+
+
+
 }
