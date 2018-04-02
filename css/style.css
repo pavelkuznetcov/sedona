@@ -800,9 +800,6 @@ p {
   bottom: 0;
   left: 0;
 }
-.photo-video__header--video-pres::after {
-  display: none;
-}
 .photo-video__header-header {
   font-size: 18px;
   line-height: 26px;
@@ -942,4 +939,80 @@ p {
   #icon-like {
     fill: #fff;
   }
+}
+.video-presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.photo-video__header--video-pres::after {
+  display: none;
+}
+.player-screen {
+  min-height: 201px;
+  width: 320px;
+  background-image: url("../img/video-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: 320px 201px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  .player-screen {
+    background-image: url("../img/video-mobile@2x.jpg");
+  }
+}
+.player-controls {
+  position: relative;
+  width: 280px;
+  height: 66px;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.progress-bar {
+  position: absolute;
+  top: -45px;
+  width: 280px;
+  height: 45px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.progress-bar::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 22px;
+  width: 235px;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 19px;
+  left: 60px;
+  width: 9px;
+  height: 9px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+.player-controls__btn {
+  width: 70px;
+  min-height: 66px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.player-controls__btn--subs {
+  width: 40px;
+  margin-left: auto;
+}
+#icon-video-replay {
+  fill: #5c6870;
+}
+#icon-video-subtitles {
+  fill: #5c6870;
+}
+#icon-video-fullscreen {
+  fill: #5c6870;
 }

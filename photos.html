@@ -202,16 +202,29 @@
         </header>
         <div class="video-presentation__video-player">
           <div class="player-screen">
-
+            <!-- <video
+            width="320" height="201"
+            preload="auto">
+            <source src="video/sedona.mp4" type="video/mp4">
+          </video> -->
           </div>
           <div class="player-controls">
-            <button class="player-controls__btn"></button>
-            <div class="progress-bar">
-              <div class="progress-bar__line"></div>
-              <div class="progress-bar__indicator"></div>
-            </div>
-            <button class="player-controls__btn"></button>
-            <button class="player-controls__btn"></button>
+            <button class="player-controls__btn  player-controls__btn--replay">
+              <svg width="16" height="20">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-replay"></use>
+              </svg>
+            </button>
+            <div class="progress-bar"></div>
+            <button class="player-controls__btn  player-controls__btn--subs">
+              <svg width="32" height="20">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-subtitles"></use>
+              </svg>
+            </button>
+            <button class="player-controls__btn  player-controls__btn--wide">
+              <svg width="20" height="20">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-video-fullscreen"></use>
+              </svg>
+            </button>
           </div>
         </div>
       </section>
